@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9379c36d04cb481f9f17365514195b9e" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_NhaSachModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.ChiTietGioHang" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.ChiTietPhieuNhapSach" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.DonHang" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.GioHang" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.KhachHang" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.ManHinh" Width="1.5" PointX="8.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.NhanVien" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.NhanVienNhomNhanVien" Width="1.5" PointX="11" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.NhaXuatBan" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.NhomNhanVien" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.PhanQuyen" Width="1.5" PointX="11" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.PhieuNhapSach" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.Sach" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.TacGia" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_NhaSachModel.TheLoai" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_ctdh_dh" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_ctdh_sach" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_ctgh_gh" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_ctgh_sach" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_ctphs_pns" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_ctphs_sach" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_donhang_kh" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_donhang_nv" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_giohang_kh" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_pq_mh" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_pnc_ncc" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_nvnnv_nv" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_pnc_nv" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_nvnnv_nnv" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_sach_nxb" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_pq_nnv" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_sach_tg" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_NhaSachModel.fk_sach_tl" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
