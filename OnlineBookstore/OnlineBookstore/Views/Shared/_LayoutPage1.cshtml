@@ -65,19 +65,23 @@
             display: block;
         }
 
-        body {
-            background-image: url('/images/hinh1.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        /* Màu chữ cho thông báo lỗi */
+        .field-validation-error {
+            color: red;
         }
+
+        /* Màu chữ cho required */
+        .input-validation-error {
+            color: red;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container-fluid" style="height: 80px; max-width: 1300px">
+            <div class="container-fluid" style="height: 80px; max-width: 1250px">
                 <a class="navbar-brand" href="/home/index"><img src="~/Image/logo.png" style="max-height: 100px;" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -85,23 +89,72 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Trang chủ</a>
+                            <a class="nav-link" href="@Url.Action("Index", "Home")">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a data-mdb-dropdown-init
+                               class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarDropdownMenuLink"
+                               role="button"
+                               aria-expanded="false">
+                                Danh mục sách
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Liên hệ</a>
                         </li>
                     </ul>
-                    <div class="dropdown">
-                        <a class="btn btn-link position-relative" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user" style="color: black;"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="">Dành cho sinh viên</a>
-                            <a class="dropdown-item" href="">Dành cho giáo viên soạn đề</a>
-                            <a class="dropdown-item" href="">Dành cho cán bộ coi thi</a>
-                            <a class="dropdown-item" href="">Dành cho quản lý</a>
-                        </div>
-                    </div>
                     <div class="ms-auto d-flex">
-                        <a class="dropdown-item" href="">Đăng nhập</a>
-                        <a class="dropdown-item" href="">Đăng ký</a>
+                        <div class="input-group">
+                            <input type="text" id="search_query" class="form-control" placeholder="Tìm kiếm...">
+                            <div class="input-group-prepend">
+                                <button id="search_button" class="btn btn-link" type="button"><i class="fas fa-search" style="color: black"></i></button>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="btn btn-link position-relative" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user" style="color: black;"></i>
+                            </a>
+                            @{
+                                var isLoggedIn = Session["UserId"] != null;
+                            }
+
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="userDropdown">
+                                @if (!isLoggedIn)
+                                {
+                                    <li><a class="dropdown-item" href="@Url.Action("Register", "Account")">Đăng ký</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Login", "Account")">Đăng nhập</a></li>
+                                }
+                                else
+                                {
+                                    <li><a class="dropdown-item" href="@Url.Action("UserProfile", "User")">Xem profile</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Logout", "Account")">Đăng xuất</a></li>
+                                }
+                            </ul>
+
+                        </div>
+                        <a class="btn btn-link position-relative" href="cart.php">
+                            <i class="fas fa-shopping-cart" style="color: black;"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </a>
                     </div>
 
                 </div>
@@ -122,7 +175,7 @@
                 <div class="container text-center text-md-start mt-5">
                     <div class="row mt-3">
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold">NHCQuiz</h6>
+                            <h6 class="text-uppercase fw-bold">Sunshine</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
                                 Hãy đến với shop của tôi và mua bất cứ nhưng gì bạn thích đảm bảo bạn sẽ không thất vọng

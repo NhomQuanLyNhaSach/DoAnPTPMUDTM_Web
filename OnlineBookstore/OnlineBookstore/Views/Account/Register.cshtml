@@ -1,0 +1,49 @@
+﻿@model OnlineBookstore.Models.KhachHang
+@{
+    ViewBag.Title = "Đăng ký";
+}
+
+<h2>Đăng ký</h2>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HoTen)
+        @Html.TextBoxFor(model => model.HoTen, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.HoTen)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TenDangNhap)
+        @Html.TextBoxFor(model => model.TenDangNhap, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.TenDangNhap)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MatKhau)
+        @Html.PasswordFor(model => model.MatKhau, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.MatKhau)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SDT)
+        @Html.TextBoxFor(model => model.SDT, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SDT)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DiaChi)
+        @Html.TextBoxFor(model => model.DiaChi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.DiaChi)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Đăng ký</button>
+}
