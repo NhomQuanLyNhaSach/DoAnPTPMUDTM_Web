@@ -88,3 +88,8 @@ D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\O
 D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\bin\System.Memory.xml
 D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\bin\System.Numerics.Vectors.xml
 D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\bin\PagedList.dll
+D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\bin\PagedList.Mvc.dll
+D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\bin\PagedList.xml
+D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\bin\PagedList.Mvc.xml
+D:\Data\University\Code\C#\PTUDTM\DA_LTCSHARP2_NHOM_10\SOURCE\DoAnPTPMUDTM_Web\OnlineBookstore\OnlineBookstore\obj\Debug\OnlineBookstore.csprojAssemblyReference.cache
