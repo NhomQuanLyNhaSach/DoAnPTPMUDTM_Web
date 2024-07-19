@@ -1,0 +1,43 @@
+﻿@model OnlineBookstore.Models.Sach
+
+@{
+    ViewBag.Title = "Chi Tiết Sách";
+}
+
+<h2>Chi Tiết Sách</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="@Model.HinhAnh" alt="Book Image" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+        <h3>@Model.Ten</h3>
+        <p><strong>Tác Giả:</strong> @Model.TacGia.Ten</p>
+        <p><strong>Nhà Xuất Bản:</strong> @Model.NhaXuatBan.Ten</p>
+        <p><strong>Thể Loại:</strong> @Model.TheLoai.Ten</p>
+        <p><strong>Năm Xuất Bản:</strong> @Model.NamXuatBan</p>
+        <p><strong>Giá Bán:</strong> @Model.GiaBan VNĐ</p>
+
+        <div class="d-flex">
+            @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
+            {
+                <div class="form-group mb-3">
+                    <label for="quantity">Số Lượng:</label>
+                    <input type="number" name="quantity" id="quantity" class="form-control" value="1" min="1" />
+                </div>
+
+                <input type="hidden" name="bookId" value="@Model.Id" />
+
+                <button type="submit" class="btn btn-success">AddToCart</button>
+
+                @Html.ActionLink("Quay Lại", "Index", "Home", null, new { @class = "btn btn-primary" })
+            }
+
+
+        </div>
+        
+    </div>
+</div>
+
+
+
