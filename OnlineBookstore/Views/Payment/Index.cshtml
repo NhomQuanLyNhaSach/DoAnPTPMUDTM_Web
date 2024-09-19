@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Thanh toán";
+}
+
+<div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="paymentForm" action="/payment/index" method="post">
+                <!-- Address Input -->
+                <div class="form-group">
+                    <label for="DiaChiNhanHang">Địa chỉ giao hàng:</label>
+                    <input type="text" class="form-control" id="DiaChiNhanHang" name="DiaChiNhanHang" required>
+                </div>
+
+                <!-- Payment Method Radio Buttons -->
+                <div class="form-group">
+                    <label>Chọn hình thức thanh toán:</label><br>
+                    <label class="radio-inline">
+                        <input type="radio" name="PhuongThucThanhToan" value="false" checked> Thanh toán khi nhận hàng
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="PhuongThucThanhToan" value="true"> Thanh toán online
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
